@@ -1,12 +1,9 @@
 import VueRouter from 'vue-router';
 import { store } from '~s'
+import Home from '~p/Home.vue'
 
-const root = () => import('~p/Root.vue');
-const fat = () => import('~p/Fat.vue');
-const fattest = () => import('~p/Fattest.vue');
+const Favourite = () => import('~p/Favourite.vue');
 
-// import Root from '~p/Root.vue'
-// import Fat from '~p/Fat.vue'
 
 let mode = '';
 if (process.env.NODE_ENV === 'production') {
@@ -15,9 +12,8 @@ if (process.env.NODE_ENV === 'production') {
 
 
 const routes = [
-    { path: '/', component: root, name: 'root'},
-    { path: '/fat', component: fat, name: 'fat'},
-    { path: '/fattest', component: fattest, name: 'fattest'}
+    { path: '/', component: Home, name: 'home'},
+    { path: '/favourite', component: Favourite, name: 'favorite'}
 ];
 
 
