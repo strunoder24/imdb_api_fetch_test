@@ -66,7 +66,6 @@ function enableIcon({state, commit}) {
     setTimeout(() => {
         //Если спустя showIconDelay скрипты всё ещё грузятся, то можно показать анимацию
         if (state.loadInProgress) {
-            console.log('hey');
             commit('setPreloaderIcon', true)
         }
     }, showIconDelay);

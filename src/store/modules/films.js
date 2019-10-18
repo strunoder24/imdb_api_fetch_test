@@ -71,7 +71,7 @@ const actions = {
                     i: id
                 }
             };
-            
+
             axios.get('', config).then(({data}) => {
                 unsorted_films.push(data);
 
